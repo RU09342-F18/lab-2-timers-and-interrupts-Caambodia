@@ -12,8 +12,8 @@ int main(void)
     P1DIR |= BIT0;                      // Set P1.0 to output
     P4DIR |= BIT7;                      // Set P4.7 to output
 
-    TA0CTL = TASSEL_1 + MC_1;           // Set Timer A0 in Up Mode with divider
-    TA1CTL = TASSEL_1 + MC_1;           // Set Timer A1 in Up Mode with divider
+    TA0CTL = TASSEL_1 + MC_1;           // Set Timer A0 in Up Mode
+    TA1CTL = TASSEL_1 + MC_1;           // Set Timer A1 in Up Mode
     TA0CCTL0 = CCIE;                    // Capture/Compare enable
     TA1CCTL0 = CCIE;                    // Capture/Compare enable
     TA0CCR0 = freqToPeriod(5);          // 5 Hz
